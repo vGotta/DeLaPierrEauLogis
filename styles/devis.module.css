@@ -1,0 +1,142 @@
+.page {
+  min-height: 80vh;
+}
+
+.header {
+  background: var(--color-anthracite);
+  padding: 5rem 1.5rem 3.5rem;
+  border-bottom: 3px solid var(--color-blue);
+}
+
+.header .section-title {
+  color: var(--color-white);
+  margin: 0.5rem 0 1rem;
+}
+
+.eyebrow {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-blue);
+  margin-bottom: 0.5rem;
+}
+
+.intro {
+  color: rgba(255, 255, 255, 0.65);
+  max-width: 560px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* ── LAYOUT ── */
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 3rem;
+  align-items: start;
+}
+
+.formWrap {
+  background: var(--color-white);
+  border: 1.5px solid var(--color-gray-light);
+  border-radius: var(--radius-md);
+  padding: 2.5rem;
+}
+
+/* ── ASIDE ── */
+.aside {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: sticky;
+  top: 90px;
+}
+
+.asideCard {
+  background: var(--color-gray-light);
+  border-radius: var(--radius-md);
+  padding: 1.75rem;
+}
+
+.asideTitle {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-anthracite);
+  margin-bottom: 1.25rem;
+}
+
+.steps {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.step {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+}
+
+.stepNum {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  background: var(--color-blue);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-top: 0.1em;
+}
+
+.stepText {
+  font-size: 0.9rem;
+  color: var(--color-gray);
+  line-height: 1.6;
+}
+
+.asideText {
+  font-size: 0.9rem;
+  color: var(--color-gray);
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+}
+
+.emailLink {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-blue);
+  letter-spacing: 0.02em;
+  transition: color var(--transition);
+  word-break: break-all;
+}
+
+.emailLink:hover {
+  color: var(--color-blue-dark);
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .aside {
+    position: static;
+    order: -1;
+  }
+
+  .formWrap {
+    padding: 1.5rem;
+  }
+}

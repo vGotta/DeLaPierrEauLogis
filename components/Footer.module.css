@@ -1,0 +1,85 @@
+.footer {
+  background: var(--color-anthracite);
+  color: rgba(255, 255, 255, 0.7);
+  border-top: 3px solid var(--color-blue);
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3.5rem 1.5rem 2.5rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 3rem;
+}
+
+.brandName {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--color-white);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.5rem;
+}
+
+.brandName span {
+  color: var(--color-blue);
+}
+
+.tagline {
+  font-size: 0.9rem;
+  color: var(--color-stone);
+  margin-bottom: 0.75rem;
+}
+
+.zone {
+  font-size: 0.85rem;
+}
+
+.colTitle {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-blue);
+  margin-bottom: 1rem;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.link {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.65);
+  transition: color var(--transition);
+}
+
+.link:hover {
+  color: var(--color-blue);
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  padding: 1.25rem 1.5rem;
+  font-size: 0.8rem;
+  color: var(--color-stone);
+}
+
+@media (max-width: 768px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2.5rem 1rem 2rem;
+  }
+}

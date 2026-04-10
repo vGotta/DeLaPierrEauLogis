@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap');
+
+:root {
+  /* Palette DeLaPierrEauLogis — tirée du logo */
+  --color-blue:       #00AEEF;
+  --color-blue-dark:  #0086BE;
+  --color-blue-light: #E6F7FD;
+  --color-anthracite: #1E2832;
+  --color-gray:       #4A5568;
+  --color-gray-light: #F2F4F7;
+  --color-stone:      #8A8F9A;
+  --color-green:      #4CAF50;
+  --color-white:      #FFFFFF;
+
+  /* Typographie */
+  --font-display: 'Barlow Condensed', sans-serif;
+  --font-body:    'Barlow', sans-serif;
+
+  /* Espacements */
+  --section-pad: 5rem 1.5rem;
+  --radius-sm:   6px;
+  --radius-md:   12px;
+  --radius-lg:   20px;
+
+  /* Transitions */
+  --transition: 0.25s ease;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-anthracite);
+  background: var(--color-white);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+}
+
+/* Utilitaires globaux */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section {
+  padding: var(--section-pad);
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: var(--color-anthracite);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.section-title span {
+  color: var(--color-blue);
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--color-blue);
+  color: var(--color-white);
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.85rem 2rem;
+  border-radius: var(--radius-sm);
+  border: none;
+  cursor: pointer;
+  transition: background var(--transition), transform var(--transition);
+}
+
+.btn-primary:hover {
+  background: var(--color-blue-dark);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  color: var(--color-anthracite);
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.85rem 2rem;
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--color-anthracite);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.btn-outline:hover {
+  background: var(--color-anthracite);
+  color: var(--color-white);
+}
+
+/* Responsive base */
+@media (max-width: 768px) {
+  :root {
+    --section-pad: 3rem 1rem;
+  }
+}

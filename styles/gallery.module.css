@@ -1,0 +1,168 @@
+.page {
+  min-height: 80vh;
+}
+
+.header {
+  background: var(--color-anthracite);
+  padding: 5rem 1.5rem 3.5rem;
+  border-bottom: 3px solid var(--color-blue);
+}
+
+.header .section-title {
+  color: var(--color-white);
+  margin: 0.5rem 0 1rem;
+}
+
+.eyebrow {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-blue);
+  margin-bottom: 0.5rem;
+}
+
+.intro {
+  color: rgba(255, 255, 255, 0.65);
+  max-width: 580px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* ── FILTRES ── */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.filterBtn {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.5rem 1.1rem;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--color-gray-light);
+  background: var(--color-white);
+  color: var(--color-gray);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.filterBtn:hover {
+  border-color: var(--color-blue);
+  color: var(--color-blue);
+}
+
+.filterActive {
+  background: var(--color-blue);
+  border-color: var(--color-blue);
+  color: var(--color-white) !important;
+}
+
+/* ── GRILLE ── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.item {
+  position: relative;
+  aspect-ratio: 4/3;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.placeholder {
+  width: 100%;
+  height: 100%;
+  background: var(--color-gray-light);
+  border: 2px dashed rgba(0, 174, 239, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  color: var(--color-stone);
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all var(--transition);
+}
+
+.item:hover .placeholder {
+  border-color: var(--color-blue);
+  background: var(--color-blue-light);
+}
+
+.placeholderSub {
+  font-size: 0.75rem;
+  opacity: 0.6;
+  text-transform: none;
+  letter-spacing: 0;
+  font-family: var(--font-body);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(30, 40, 50, 0.85) 0%, transparent 55%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1rem;
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.item:hover .overlay {
+  opacity: 1;
+}
+
+.overlayTitle {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-white);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.overlayTag {
+  font-size: 0.75rem;
+  color: var(--color-blue);
+  font-family: var(--font-display);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .filters {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 0.5rem;
+  }
+
+  .filterBtn {
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
